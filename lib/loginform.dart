@@ -1,4 +1,4 @@
-// ignore_for_file: sized_box_for_whitespace
+// ignore_for_file: sized_box_for_whitespace, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -35,22 +35,22 @@ class _LoginFormState extends State<LoginForm> {
           children: <Widget>[
             new Column(
               children: <Widget>[
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Image(image: AssetImage("images/login.png")),
-                Text(
+                const Image(image: AssetImage("images/login.png")),
+                const Text(
                   "Login Form",
                   style: TextStyle(fontFamily: "Netflix", fontSize: 20),
                 ),
                 new TextField(
                   controller: controllerusername,
-                  style: TextStyle(fontFamily: "Netflix"),
+                  style: const TextStyle(fontFamily: "Netflix"),
                   decoration: new InputDecoration(
                       hintText: "Username", labelText: "Username"),
                 ),
                 new TextField(
-                  style: TextStyle(fontFamily: "Netflix"),
+                  style: const TextStyle(fontFamily: "Netflix"),
                   controller: controllerpassword,
                   obscureText: true,
                   enableSuggestions: false,
@@ -65,8 +65,8 @@ class _LoginFormState extends State<LoginForm> {
                   width: double.infinity,
                   child: new ElevatedButton(
                     onPressed: () {
-                      if (controllerusername.value.text == 'admin' &&
-                          controllerpassword.value.text == 'admin') {
+                      if (controllerusername.value.text == '' &&
+                          controllerpassword.value.text == '') {
                         Navigator.pushReplacement(context,
                             MaterialPageRoute(builder: (context) {
                           return HomePage();
@@ -92,8 +92,8 @@ class _LoginFormState extends State<LoginForm> {
                     },
                     child: new Text(
                       "Login",
-                      style:
-                          TextStyle(fontFamily: "Netflix", color: Colors.white),
+                      style: const TextStyle(
+                          fontFamily: "Netflix", color: Colors.white),
                     ),
                     //color: Colors.blueAccent,
                   ),
