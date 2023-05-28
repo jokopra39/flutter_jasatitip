@@ -21,12 +21,15 @@ class _HomeState extends State<Home> {
   Future<List> getData() async {
     String token =
         "4|eO9yjAJKqSC6keLoxViLijvlONV56sx72ZRgIcYC"; //await Candidate().getToken();
-    final response =
-        await http.get(Uri.parse("http://127.0.0.1:8000/api/posts"), headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-      'Authorization': 'Bearer $token',
-    });
+    //http://192.168.8.121/laravel-backend/public/
+    //"http://127.0.0.1:8000/api/posts"
+    final response = await http.get(
+        Uri.parse("http://192.168.8.121/laravel-backend/public/api/posts"),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'Authorization': 'Bearer $token',
+        });
     var jsonResponse = json.decode(response.body);
 
     print(jsonResponse['data']);

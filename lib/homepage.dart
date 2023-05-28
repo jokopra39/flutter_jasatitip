@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-//import 'package:jasa_titip/loginform.dart';
+import 'package:jasa_titip/scanner.dart';
+import 'package:jasa_titip/loginform.dart';
 import 'listdata.dart';
 
 class HomePage extends StatelessWidget {
@@ -57,14 +58,34 @@ class HomePage extends StatelessWidget {
             child: ElevatedButton(
                 //color: Colors.blue,
                 child: Text(
+                  "Barcode Scanner",
+                  style: TextStyle(fontFamily: "Netflix", color: Colors.white),
+                ),
+                onPressed: () {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) {
+                    return Scanner();
+                  }));
+                  //logout(context);
+                }),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            height: 50,
+            width: double.infinity,
+            child: ElevatedButton(
+                //color: Colors.blue,
+                child: Text(
                   "Logout",
                   style: TextStyle(fontFamily: "Netflix", color: Colors.white),
                 ),
                 onPressed: () {
-                  // Navigator.pushReplacement(context,
-                  //     MaterialPageRoute(builder: (context) {
-                  //   return LoginForm();
-                  // }));
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) {
+                    return LoginForm();
+                  }));
                   logout(context);
                 }),
           ),

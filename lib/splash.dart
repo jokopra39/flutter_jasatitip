@@ -50,7 +50,7 @@ class _SplashScreenState extends State<SplashScreen> {
               textAlign: TextAlign.center,
             ),
             Text(
-              "© Muhamad Ikhsan & Fathur Rahman",
+              "© Joe melihat ikan di kolam",
               style: TextStyle(
                 fontSize: 14.0,
                 color: Colors.black,
