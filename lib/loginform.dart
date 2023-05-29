@@ -38,7 +38,7 @@ class _LoginFormState extends State<LoginForm> {
                 const SizedBox(
                   height: 20,
                 ),
-                const Image(image: AssetImage("images/login.png")),
+                const Image(image: AssetImage("assets/images/login.png")),
                 const Text(
                   "Login Form",
                   style: TextStyle(fontFamily: "Netflix", fontSize: 20),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jasa_titip/scanner.dart';
 import 'package:jasa_titip/loginform.dart';
+import 'fitness_app/fitness_app_home_screen.dart';
 import 'listdata.dart';
 
 class HomePage extends StatelessWidget {
@@ -18,7 +19,7 @@ class HomePage extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Image(image: AssetImage("images/dashboard.png")),
+          Image(image: AssetImage("assets/images/dashboard.png")),
           SizedBox(
             height: 10,
           ),
@@ -84,7 +85,7 @@ class HomePage extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) {
-                    return LoginForm();
+                    return FitnessAppHomeScreen(); //LoginForm();
                   }));
                   logout(context);
                 }),
